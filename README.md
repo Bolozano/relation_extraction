@@ -6,6 +6,6 @@
 ```
 ```python
 !git clone https://github.com/Bolozano/relation_extraction.git
-%cd relation_extraction              #%for Colab, !for linux
+%cd relation_extraction              #   %for Colab, !for linux
 !python to_py.py c9cuW!izMoCUcyDdp-qwbhc 2021-07-01 2021-07-02
 ```
