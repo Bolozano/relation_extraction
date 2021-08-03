@@ -22,8 +22,6 @@ import json
 # import matplotlib as plt
 import sys
 
-from google.colab import drive
-drive.mount('/content/drive')
 
 # tokenizer = BertTokenizer.from_pretrained('bert-base-cased')  #there are multilingue model
 # model = BertModel.from_pretrained('bert-base-cased',output_attentions=True).cuda()
