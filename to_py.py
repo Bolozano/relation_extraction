@@ -9,21 +9,21 @@ Original file is located at
 # MaMa Algorithme  -LM to KG
 """
 
-import torch
-from transformers import BertTokenizer, BertModel
+# import torch
+# from transformers import BertTokenizer, BertModel
 import string
 from tqdm.notebook import tqdm
-import pickle
-import gc
+# import pickle
+# import gc
 import re
 import json
-import time
-import numpy as np
-import matplotlib as plt
+# import time
+# import numpy as np
+# import matplotlib as plt
 import sys
 
-tokenizer = BertTokenizer.from_pretrained('bert-base-cased')  #there are multilingue model
-model = BertModel.from_pretrained('bert-base-cased',output_attentions=True).cuda()
+# tokenizer = BertTokenizer.from_pretrained('bert-base-cased')  #there are multilingue model
+# model = BertModel.from_pretrained('bert-base-cased',output_attentions=True).cuda()
 
 import spacy.cli
 spacy.cli.download("en_core_web_lg")
@@ -212,16 +212,16 @@ class data:
 
 """# Matching"""
 
-def to_gpu(Tokenizer_output):
-  tokens_tensor = Tokenizer_output['input_ids'][:,:500].cuda()
-  token_type_ids = Tokenizer_output['token_type_ids'][:,:500].cuda()
-  attention_mask = Tokenizer_output['attention_mask'][:,:500].cuda()
+# def to_gpu(Tokenizer_output):
+#   tokens_tensor = Tokenizer_output['input_ids'][:,:500].cuda()
+#   token_type_ids = Tokenizer_output['token_type_ids'][:,:500].cuda()
+#   attention_mask = Tokenizer_output['attention_mask'][:,:500].cuda()
 
-  output = {'input_ids' : tokens_tensor, 
-            'token_type_ids' : token_type_ids, 
-            'attention_mask' : attention_mask}
+#   output = {'input_ids' : tokens_tensor, 
+#             'token_type_ids' : token_type_ids, 
+#             'attention_mask' : attention_mask}
 
-  return output
+#   return output
 
 """# TREAT"""
 
