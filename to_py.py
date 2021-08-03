@@ -118,7 +118,7 @@ class data:
         self.relations.append(relation)
 
         print(relation['original_txt'])
-        print(relation['head'],'//',relation['verb'],'//',relarion['tail'])
+        print(relation['head'],'//',relation['verb'],'//',relation['tail'])
         print()
     
   def contain_interesting_verb(self,relation):
