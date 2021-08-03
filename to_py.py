@@ -77,7 +77,6 @@ class data:
       doc=nlp(sentence)
       if len(doc.ents)<2:
         continue
-      print(sentence)
       # self.texts.append(temp_texts[i][0])
       # self.add(doc,len(self.texts)-1,temp_texts[i][1])  
       self.texts.append(temp_texts[i])
