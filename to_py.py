@@ -233,7 +233,7 @@ def treat(relations,news):
   k=0
   web_data=data(news)
   relations=relations+web_data.relations
-  h = open("simpleacquire.json.txt", 'w+')
+  h = open("simpleacquire.json", 'w+')
   new_json=json.dumps(relations,indent=1)
   h.write(new_json)
   h.close()
