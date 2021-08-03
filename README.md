@@ -1,6 +1,7 @@
 # relation_extraction
 
 ```python
+!pip install -U spacy
 !pip install -q transformers 
 !pip install --upgrade py2neo
 ```
