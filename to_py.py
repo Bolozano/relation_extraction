@@ -22,14 +22,17 @@ import json
 # import matplotlib as plt
 import sys
 
+from google.colab import drive
+drive.mount('/content/drive')
+
 # tokenizer = BertTokenizer.from_pretrained('bert-base-cased')  #there are multilingue model
 # model = BertModel.from_pretrained('bert-base-cased',output_attentions=True).cuda()
 
 import spacy.cli
-spacy.cli.download("en_core_web_lg")
+spacy.cli.download("en_core_web_sm")
 
 import spacy
-nlp=spacy.load('en_core_web_lg')
+nlp=spacy.load('en_core_web_sm')
 
 #@title Neo4J Credentials
 neo4jUser = "intern2021" #@param {type:"string"}
@@ -99,7 +102,7 @@ class data:
       contain,interesting_verb,pos,by=self.contain_interesting_verb(relation)
       if contain==True:
         relation={}
-        print(number,index)
+        
         relation['i_th_phrase']=number
         relation['original_txt']=self.get_phrase_i(index)
         
@@ -115,8 +118,9 @@ class data:
         relation['head_type']=entities_in_a_phrase[i].category
         relation['tail_type']=entities_in_a_phrase[i+1].category
         self.relations.append(relation)
-    
+
         print(relation['original_txt'])
+        print(relation['head'],'//',relation[verb],'//',relarion['tail'])
         print()
     
   def contain_interesting_verb(self,relation):
