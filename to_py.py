@@ -248,4 +248,12 @@ news = graph.query("""
   RETURN n.title as title        
   """, {"before": sys.argv[2], "after": sys.argv[3]})
 
-treat(relations,news)
+relations=treat(relations,news)
+count=0
+for relation in relations:
+    if 'acqui' in relation['verb']:
+        count=count+1
+        
+        
+print('number of acq',count)
+    
